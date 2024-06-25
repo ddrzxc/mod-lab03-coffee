@@ -22,7 +22,6 @@ TEST(automata, test3) {
     // прием денег
     Automata automata;
     automata.on();
-    automata.off();
     automata.coin(100);
     EXPECT_EQ(ACCEPT, automata.getState());
     EXPECT_EQ(100, automata.getMoney());
@@ -32,7 +31,6 @@ TEST(automata, test4) {
     // прием денег 2
     Automata automata;
     automata.on();
-    automata.off();
     automata.coin(100);
     automata.coin(30);
     EXPECT_EQ(ACCEPT, automata.getState());
