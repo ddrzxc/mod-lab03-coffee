@@ -1,10 +1,12 @@
 // Copyright 2024 Darya Rybakova
+#ifndef INCLUDE_AUTOMATA_H_
+#define INCLUDE_AUTOMATA_H_
+
 #include <vector>
 #include <string>
 #include <iostream>
 
-enum State
-{
+enum State {
     OFF,
     WAIT,
     ACCEPT,
@@ -12,16 +14,15 @@ enum State
     COOK
 };
 
-class Automata
-{
-    private:
+class Automata {
+ private:
     std::vector<std::string> drinks;
     std::vector<float> prices;
     float money;
     State state;
     int selected;
 
-    public:
+ public:
     Automata();
     void on();
     void off();
@@ -35,3 +36,5 @@ class Automata
     void finish();
     std::string getSelected();
 };
+
+#endif  // INCLUDE_AUTOMATA_H_
