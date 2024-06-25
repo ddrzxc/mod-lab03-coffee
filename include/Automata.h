@@ -35,6 +35,7 @@ class Automata {
     void cook();
     void finish();
     std::string getSelected();
+    float getMoney();
 };
 
 #endif  // INCLUDE_AUTOMATA_H_

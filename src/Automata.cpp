@@ -11,7 +11,7 @@ Automata::Automata() {
 
 void Automata::on() {
     if (state == OFF)
-        state == WAIT;
+        state = WAIT;
 }
 
 void Automata::off() {
@@ -74,5 +74,9 @@ void Automata::finish() {
 std::string Automata::getSelected() {
     if (selected == -1)
         return "none";
-    return drinks[selected] + std::to_string(prices[selected]);
+    return drinks[selected] + " " + std::to_string(prices[selected]);
+}
+
+float Automata::getMoney() {
+    return money;
 }
